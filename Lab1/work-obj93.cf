@@ -1,0 +1,7 @@
+v 4
+file . "test.vhd" "87c7c18268164146f9aa5e588f9cbdd94cdb141c" "20220317031429.162":
+  entity testbench at 1( 0) + 0 on 13;
+  architecture final_testbench of testbench at 7( 115) + 0 on 14;
+file . "lab1.vhd" "89c554ec567ac53745e4c7fc101234bb96fa1376" "20220317031429.105":
+  entity decoder at 1( 0) + 0 on 11;
+  architecture decoder_a of decoder at 10( 181) + 0 on 12;

@@ -1,0 +1,61 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Mon Apr 04 05:32:17 2022
+[*]
+[dumpfile] "D:\Cloud\OneDrive\UTFPR\AULA\ELF61\Lab3\Eq06-RegFile.ghw"
+[dumpfile_mtime] "Mon Apr 04 05:25:56 2022"
+[dumpfile_size] 3113
+[savefile] "D:\Cloud\OneDrive\UTFPR\AULA\ELF61\Lab3\Eq06-RegFile.gtkw"
+[timestart] 0
+[size] 1672 979
+[pos] -84 -33
+*-27.117374 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.registerfile_tb.
+[sst_width] 197
+[signals_width] 118
+[sst_expanded] 1
+[sst_vpaned_height] 286
+@28
+[color] 7
+top.registerfile_tb.s_clk
+[color] 1
+top.registerfile_tb.s_rst
+[color] 6
+#{top.registerfile_tb.s_a3[2:0]} top.registerfile_tb.s_a3[2] top.registerfile_tb.s_a3[1] top.registerfile_tb.s_a3[0]
+[color] 1
+top.registerfile_tb.s_we3
+@24
+[color] 2
+#{top.registerfile_tb.s_wd3[15:0]} top.registerfile_tb.s_wd3[15] top.registerfile_tb.s_wd3[14] top.registerfile_tb.s_wd3[13] top.registerfile_tb.s_wd3[12] top.registerfile_tb.s_wd3[11] top.registerfile_tb.s_wd3[10] top.registerfile_tb.s_wd3[9] top.registerfile_tb.s_wd3[8] top.registerfile_tb.s_wd3[7] top.registerfile_tb.s_wd3[6] top.registerfile_tb.s_wd3[5] top.registerfile_tb.s_wd3[4] top.registerfile_tb.s_wd3[3] top.registerfile_tb.s_wd3[2] top.registerfile_tb.s_wd3[1] top.registerfile_tb.s_wd3[0]
+@28
+#{top.registerfile_tb.s_a1[2:0]} top.registerfile_tb.s_a1[2] top.registerfile_tb.s_a1[1] top.registerfile_tb.s_a1[0]
+@c00024
+[color] 3
+#{top.registerfile_tb.s_rd1[15:0]} top.registerfile_tb.s_rd1[15] top.registerfile_tb.s_rd1[14] top.registerfile_tb.s_rd1[13] top.registerfile_tb.s_rd1[12] top.registerfile_tb.s_rd1[11] top.registerfile_tb.s_rd1[10] top.registerfile_tb.s_rd1[9] top.registerfile_tb.s_rd1[8] top.registerfile_tb.s_rd1[7] top.registerfile_tb.s_rd1[6] top.registerfile_tb.s_rd1[5] top.registerfile_tb.s_rd1[4] top.registerfile_tb.s_rd1[3] top.registerfile_tb.s_rd1[2] top.registerfile_tb.s_rd1[1] top.registerfile_tb.s_rd1[0]
+@28
+top.registerfile_tb.s_rd1[15]
+top.registerfile_tb.s_rd1[14]
+top.registerfile_tb.s_rd1[13]
+top.registerfile_tb.s_rd1[12]
+top.registerfile_tb.s_rd1[11]
+top.registerfile_tb.s_rd1[10]
+top.registerfile_tb.s_rd1[9]
+top.registerfile_tb.s_rd1[8]
+top.registerfile_tb.s_rd1[7]
+top.registerfile_tb.s_rd1[6]
+top.registerfile_tb.s_rd1[5]
+top.registerfile_tb.s_rd1[4]
+top.registerfile_tb.s_rd1[3]
+top.registerfile_tb.s_rd1[2]
+top.registerfile_tb.s_rd1[1]
+top.registerfile_tb.s_rd1[0]
+@1401204
+-group_end
+@28
+#{top.registerfile_tb.s_a2[2:0]} top.registerfile_tb.s_a2[2] top.registerfile_tb.s_a2[1] top.registerfile_tb.s_a2[0]
+@25
+[color] 3
+#{top.registerfile_tb.s_rd2[15:0]} top.registerfile_tb.s_rd2[15] top.registerfile_tb.s_rd2[14] top.registerfile_tb.s_rd2[13] top.registerfile_tb.s_rd2[12] top.registerfile_tb.s_rd2[11] top.registerfile_tb.s_rd2[10] top.registerfile_tb.s_rd2[9] top.registerfile_tb.s_rd2[8] top.registerfile_tb.s_rd2[7] top.registerfile_tb.s_rd2[6] top.registerfile_tb.s_rd2[5] top.registerfile_tb.s_rd2[4] top.registerfile_tb.s_rd2[3] top.registerfile_tb.s_rd2[2] top.registerfile_tb.s_rd2[1] top.registerfile_tb.s_rd2[0]
+[pattern_trace] 1
+[pattern_trace] 0

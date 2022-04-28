@@ -1,0 +1,1 @@
+GHDL_GTKWAVE_HELPER "ghdl -a lab1.vhd" "ghdl -a test.vhd" "ghdl -r testbench --wave=sim.ghw" "gtkw sim.ghw"
