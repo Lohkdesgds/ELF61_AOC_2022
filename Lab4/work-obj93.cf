@@ -1,0 +1,16 @@
+v 4
+file . "Eq06-ULARegs-tb.vhd" "180272c54f6e3e3b993db54b0599654202ffb25b" "20220428183237.618":
+  entity ularegs_tb at 4( 69) + 0 on 59;
+  architecture a_ularegs_tb of ularegs_tb at 11( 173) + 0 on 60;
+file . "Eq06-RegFile.vhd" "a60620060e08cd3f588bc95067bc2329ff48d770" "20220428183237.525":
+  entity registerfile at 4( 74) + 0 on 55;
+  architecture a_registerfile of registerfile at 22( 815) + 0 on 56;
+file . "Eq06-ULA.vhd" "d3397d936a87e9f4404821cd79a928ba8fcaf1df" "20220428183237.429":
+  entity ula at 4( 55) + 0 on 51;
+  architecture a_ula of ula at 18( 402) + 0 on 52;
+file . "Eq06-reg16bits.vhd" "a6c77e1d1ae8bd57e0fecb3b24eab74c7477651a" "20220428183237.483":
+  entity reg at 4( 74) + 0 on 53;
+  architecture a_reg of reg at 18( 394) + 0 on 54;
+file . "Eq06-ULARegs.vhd" "d4fe4b111b433ef8080030758c8fca69462d95bb" "20220428183237.572":
+  entity ularegs at 4( 75) + 0 on 57;
+  architecture a_ularegs of ularegs at 24( 855) + 0 on 58;

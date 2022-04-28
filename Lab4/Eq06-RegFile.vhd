@@ -3,14 +3,14 @@
 
 library ieee;
 use ieee.std_logic_1164.all;
-use ieee.numeric_std.all; 
+use ieee.numeric_std.all;
 
 entity RegisterFile is 
     port (
         CLK : in std_logic;                 -- Clock geral
-        A1 : in unsigned(2 downto 0);       -- O selecionar leitura 1
-        A2 : in unsigned(2 downto 0);       -- O selecionar leitura 2
-        A3 : in unsigned(2 downto 0);       -- Selecionar de escrita
+        A1  : in unsigned(2 downto 0);      -- O selecionar leitura 1
+        A2  : in unsigned(2 downto 0);      -- O selecionar leitura 2
+        A3  : in unsigned(2 downto 0);      -- Selecionar de escrita
         WD3 : in unsigned(15 downto 0);     -- Barramento de dados de escrita
         WE3 : in std_logic;                 -- Write enable (clock rise)
         RST : in std_logic;                 -- Zera tudo
