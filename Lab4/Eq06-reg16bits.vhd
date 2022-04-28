@@ -1,4 +1,4 @@
--- Projeto Banco de registradores
+-- Projeto Banco de registradores (V2)
 -- Equipe: Ernesto & Ellejeane
 
 library ieee;
@@ -7,16 +7,16 @@ use ieee.numeric_std.all;
 
 entity REG is 
     port (
-        clk : in std_logic;
-        rst : in std_logic;
-        wr_en : in std_logic;
-        data_in : in unsigned(15 downto 0);
+        clk      : in std_logic;
+        rst      : in std_logic;
+        wr_en    : in std_logic;
+        data_in  : in unsigned(15 downto 0);
         data_out : out unsigned(15 downto 0)
     );
 end entity;
 
 architecture a_REG of REG is
-signal s_registro : unsigned(15 downto 0);
+signal s_registro : unsigned(15 downto 0) := "0000000000000000";
 begin
 
 data_out <= s_registro;
