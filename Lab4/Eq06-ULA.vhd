@@ -29,8 +29,6 @@ s_out <=
 out_ULA <= s_out;
 
 flagZ <=
-    '1' when (op = "00" and (s_out < in_A or s_out < in_B)) else
-    '1' when (op = "01" and (s_out > in_A)) else
-    '0';
+    '1' when s_out = x"0000" else '0';
 
 end architecture;
