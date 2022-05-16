@@ -1,0 +1,52 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Mon May 16 03:04:52 2022
+[*]
+[dumpfile] "D:\Cloud\Github\TarefasProg\ELF61 - Arquitetura de Computadores\_shared\Lab5_imporrt\Eq06-ROM_PC_UC_tb.ghw"
+[dumpfile_mtime] "Mon May 16 03:04:08 2022"
+[dumpfile_size] 8188
+[savefile] "D:\Cloud\Github\TarefasProg\ELF61 - Arquitetura de Computadores\_shared\Lab5_imporrt\Eq06-ROM_PC_UC_tb.gtkw"
+[timestart] 0
+[size] 2560 1369
+[pos] -1 -1
+*-27.805321 85000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] top.
+[treeopen] top.rom_pc_uc_tb.
+[treeopen] top.rom_pc_uc_tb.op.
+[sst_width] 197
+[signals_width] 240
+[sst_expanded] 1
+[sst_vpaned_height] 423
+@28
+[color] 6
+top.rom_pc_uc_tb.s_rst
+[color] 2
+top.rom_pc_uc_tb.s_clk
+@200
+-FETCH(0), EXEC(1)
+@28
+[color] 4
+top.rom_pc_uc_tb.op.s_estado
+@200
+-PC:
+@22
+[color] 3
+#{top.rom_pc_uc_tb.op.s_pc_currpc[15:0]} top.rom_pc_uc_tb.op.s_pc_currpc[15] top.rom_pc_uc_tb.op.s_pc_currpc[14] top.rom_pc_uc_tb.op.s_pc_currpc[13] top.rom_pc_uc_tb.op.s_pc_currpc[12] top.rom_pc_uc_tb.op.s_pc_currpc[11] top.rom_pc_uc_tb.op.s_pc_currpc[10] top.rom_pc_uc_tb.op.s_pc_currpc[9] top.rom_pc_uc_tb.op.s_pc_currpc[8] top.rom_pc_uc_tb.op.s_pc_currpc[7] top.rom_pc_uc_tb.op.s_pc_currpc[6] top.rom_pc_uc_tb.op.s_pc_currpc[5] top.rom_pc_uc_tb.op.s_pc_currpc[4] top.rom_pc_uc_tb.op.s_pc_currpc[3] top.rom_pc_uc_tb.op.s_pc_currpc[2] top.rom_pc_uc_tb.op.s_pc_currpc[1] top.rom_pc_uc_tb.op.s_pc_currpc[0]
+@200
+-INSTR DATA:
+@28
+[color] 3
+#{top.rom_pc_uc_tb.op.s_opcode[2:0]} top.rom_pc_uc_tb.op.s_opcode[2] top.rom_pc_uc_tb.op.s_opcode[1] top.rom_pc_uc_tb.op.s_opcode[0]
+@29
+[color] 3
+#{top.rom_pc_uc_tb.op.s_instrdata[4:0]} top.rom_pc_uc_tb.op.s_instrdata[4] top.rom_pc_uc_tb.op.s_instrdata[3] top.rom_pc_uc_tb.op.s_instrdata[2] top.rom_pc_uc_tb.op.s_instrdata[1] top.rom_pc_uc_tb.op.s_instrdata[0]
+@200
+-EXTRA (para debugs):
+@28
+[color] 5
+top.rom_pc_uc_tb.op.s_pc_advance
+@22
+[color] 5
+#{top.rom_pc_uc_tb.op.s_pc_nextpc[15:0]} top.rom_pc_uc_tb.op.s_pc_nextpc[15] top.rom_pc_uc_tb.op.s_pc_nextpc[14] top.rom_pc_uc_tb.op.s_pc_nextpc[13] top.rom_pc_uc_tb.op.s_pc_nextpc[12] top.rom_pc_uc_tb.op.s_pc_nextpc[11] top.rom_pc_uc_tb.op.s_pc_nextpc[10] top.rom_pc_uc_tb.op.s_pc_nextpc[9] top.rom_pc_uc_tb.op.s_pc_nextpc[8] top.rom_pc_uc_tb.op.s_pc_nextpc[7] top.rom_pc_uc_tb.op.s_pc_nextpc[6] top.rom_pc_uc_tb.op.s_pc_nextpc[5] top.rom_pc_uc_tb.op.s_pc_nextpc[4] top.rom_pc_uc_tb.op.s_pc_nextpc[3] top.rom_pc_uc_tb.op.s_pc_nextpc[2] top.rom_pc_uc_tb.op.s_pc_nextpc[1] top.rom_pc_uc_tb.op.s_pc_nextpc[0]
+[pattern_trace] 1
+[pattern_trace] 0

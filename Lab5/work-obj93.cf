@@ -1,0 +1,19 @@
+v 4
+file . "Eq06-ROM_PC_UC_tb.vhd" "5d5af375365caaf52966695d4f3f2e679d466b90" "20220516035740.250":
+  entity rom_pc_uc_tb at 4( 59) + 0 on 21;
+  architecture a_rom_pc_uc_tb of rom_pc_uc_tb at 11( 165) + 0 on 22;
+file . "Eq06-maq_estados.vhd" "a4e830345ee5b9187164c82155ed749743ff22c6" "20220516035731.983":
+  entity maq_estados at 4( 66) + 0 on 17;
+  architecture a_maq_estados of maq_estados at 15( 243) + 0 on 18;
+file . "Eq06-unidade_somadora.vhd" "339a12a18c99a05513950eee0d967a06886b2d19" "20220516035722.804":
+  entity unidade_somadora_pc at 4( 63) + 0 on 13;
+  architecture a_unidade_somadora_pc of unidade_somadora_pc at 20( 510) + 0 on 14;
+file . "Eq06-rom.vhd" "aa32a242c5e1c9c36772d77b1c1b459c85f5e69a" "20220516035715.168":
+  entity rom at 4( 50) + 0 on 11;
+  architecture a_rom of rom at 16( 272) + 0 on 12;
+file . "Eq06-program_counter.vhd" "ae256b9788ba12866508f287526f90c42bb960b6" "20220516035727.097":
+  entity program_counter at 4( 49) + 0 on 15;
+  architecture a_program_counter of program_counter at 17( 354) + 0 on 16;
+file . "Eq06-ROM_PC_UC.vhd" "dc2f6888978a13ae9c975ab5d7b21bc7d7ba6e9d" "20220516035735.978":
+  entity rom_pc_uc at 4( 56) + 0 on 19;
+  architecture a_rom_pc_uc of rom_pc_uc at 14( 206) + 0 on 20;

@@ -1,0 +1,2 @@
+helper.exe "ghdl -a Eq06-unidade_somadora.vhd" "ghdl -a Eq06-program_counter.vhd" "ghdl -a Eq06-program_counter_tb.vhd" "ghdl -r program_counter_tb --stop-time=1200ns --wave=Eq06-program_counter_tb.ghw"
+helper.exe "gtkw Eq06-program_counter_tb.ghw"
