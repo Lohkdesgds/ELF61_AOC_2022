@@ -14,7 +14,6 @@ nop
 nop
 nop
 nop
-nop
 mov R4, R7 ; 6
 mov R6, R7 ; 7
 ldi R2, #3

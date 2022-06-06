@@ -1,4 +1,4 @@
--- Projeto ULA (V2)
+-- Projeto ULA (V3)
 -- Equipe: Ernesto & Ellejeane
 -- OK
 
@@ -25,7 +25,7 @@ s_out <=
     in_A - in_B when op = "01" else
     "0000000000000000" when op = "10" and in_B = to_unsigned(0, 16) else
     in_A rem in_B when op = "10" else
-    "0000000000000000";
+    in_B;
 
 out_ULA <= s_out;
 

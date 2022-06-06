@@ -5,11 +5,11 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity ROM_PC_UC_tb is
+entity Calculadora_tb is
 end;
 
-architecture a_ROM_PC_UC_tb of ROM_PC_UC_tb is
-	component ROM_PC_UC 
+architecture a_Calculadora_tb of Calculadora_tb is
+	component Calculadora 
 	port(
 		clk, rst: in std_logic
 	);
@@ -17,7 +17,7 @@ architecture a_ROM_PC_UC_tb of ROM_PC_UC_tb is
 	
 	signal s_clk, s_rst: std_logic;
 begin
-	op: ROM_PC_UC port map(
+	poggers: Calculadora port map(
 		clk => s_clk,
 		rst => s_rst
 	);

@@ -17,7 +17,7 @@ entity ULARegs is
         A3 : in unsigned(4 downto 0);         -- Selecionar de escrita  (dest) / #0
 		CTE_EXT : in unsigned(15 downto 0);   -- Constante externa
 		
-		SELECT_MUX : in std_logic,  		  -- Usa constante externa? '1' = sim
+		SELECT_MUX : in std_logic;  		  -- Usa constante externa? '1' = sim
 
         FLAGZ : out std_logic                 -- Retorno da última operação (se a flag deu 0 ou 1)
     );

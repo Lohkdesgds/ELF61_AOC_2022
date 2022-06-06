@@ -14,7 +14,7 @@ entity rom is
 end entity;
 
 architecture a_rom of rom is 
-	type mem is array(0 to 127) of unsigned(7 downto 0);
+	type mem is array(0 to 127) of unsigned(15 downto 0);
 	constant conteudo_rom : mem := (
 		0  => "1110000001000011",
 		1  => "1110000001010111",
@@ -38,7 +38,7 @@ architecture a_rom of rom is
 		19 => "1110000000100011",
 		20 => "0100000001100010",
 		21 => "1100111111101100",
-		22 => "0000000000000000"
+		22 => "0000000000000000",
 		others => (others => '0')
 	);
 begin

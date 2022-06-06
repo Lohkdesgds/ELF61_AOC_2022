@@ -3,14 +3,14 @@
 
 Codificação das instruções:
 
-0000 0000 0000 0000 - no operation (nop)
-0000 11RD DDDD RRRR - add Rd, Rr: Salva no Rd
-0001 10RD DDDD RRRR - sub Rd, Rr: Salva no Rd
-0100 00RD DDDD RRRR - rem Rd, Rr: Salva no Rd
-1110 KKKK DDDD KKKK - ldi Rd, K: escreve o valor K em Rd (0..7 no nosso caso)
-0010 11RD DDDD RRRR - mov Rd, Rr: Copia o valor em Rr para Rd
-1100 KKKK KKKK KKKK - RJMP K: pula para PC + k + 1
-1111 01KK KKKK K001 - BRNE K: pula para PC + k + 1 se Z for zero.
+000: 0000 0000 0000 0000 - no operation (nop)
+001: 1111 01KK KKKK K001 - BRNE K: pula para PC + k + 1 se Z for zero.
+010: 0000 11RD DDDD RRRR - add Rd, Rr: Salva no Rd
+011: 0001 10RD DDDD RRRR - sub Rd, Rr: Salva no Rd
+100: 0100 00RD DDDD RRRR - rem Rd, Rr: Salva no Rd
+101: 0010 11RD DDDD RRRR - mov Rd, Rr: Copia o valor em Rr para Rd
+110: 1110 KKKK DDDD KKKK - ldi Rd, K: escreve o valor K em Rd (0..7 no nosso caso)
+111: 1100 KKKK KKKK KKKK - RJMP K: pula para PC + k + 1
 
 Legenda:
 
@@ -22,6 +22,7 @@ Informações:
 1. Para as instruções com 4 bits de endereço, AVR utiliza os resgistradores 16..31, mas no nosso caso optamos para 1..15 (0 é sempre zero)
 2. No caso dos registradores, permanecemos com o conceito do $zero no registrador zero igual no MIPS.
 3. AVR só permite 2 registradores por operação, então A1 será o mesmo que o destino.
+4. A operação #3 ("11") foi definida como "retornar apenas o segundo argumento" para o mov
 
 
 Programa a ser realizado na ROM:
