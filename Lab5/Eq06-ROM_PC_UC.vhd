@@ -83,10 +83,10 @@ begin
 		dado => s_datapc
 	);
 	
-	s_pc_advance <= '1' when s_estado = c_FETCH else '0';
+	s_pc_advance <= '1' when s_estado = c_EXEC else '0';
 	
-	s_opcode <= s_datapc(7 downto 5) when s_estado = c_FETCH;
-	s_instrdata <= s_datapc(4 downto 0) when s_estado = c_FETCH;
+	s_opcode <= s_datapc(7 downto 5);
+	s_instrdata <= s_datapc(4 downto 0);
 	
 	s_pc_nextpc <= 
 		(x"00" & "000" & s_instrdata) when s_opcode = "111" else -- "deve ser usado endereço absoluto"
