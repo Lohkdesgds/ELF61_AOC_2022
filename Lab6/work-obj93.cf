@@ -1,0 +1,16 @@
+v 4
+file . "Eq06-program_counter_tb.vhd" "6c0d4ee7d6e11269db3ec9901b67afe6a0d04330" "20220606163700.652":
+  entity program_counter_tb at 4( 71) + 0 on 31;
+  architecture a_program_counter_tb of program_counter_tb at 11( 183) + 0 on 32;
+file . "Eq06-unidade_somadora.vhd" "efe5900c742dde189b9cf647ba3da549a7c8f4ca" "20220606163700.532":
+  entity unidade_somadora_pc at 4( 71) + 0 on 27;
+  architecture a_unidade_somadora_pc of unidade_somadora_pc at 20( 518) + 0 on 28;
+file . "Eq06-maq_estados.vhd" "6122dd6ef1cb0db053922760c6a74cddc4a8b5c1" "20220606163604.651":
+  entity maq_estados at 4( 71) + 0 on 23;
+  architecture a_maq_estados of maq_estados at 15( 264) + 0 on 24;
+file . "Eq06-maq_estados_tb.vhd" "c12c54d74077c43a2a2175e95d37c30b5f5520bf" "20220606163604.713":
+  entity maq_estados_tb at 4( 71) + 0 on 25;
+  architecture a_maq_estados_tb of maq_estados_tb at 11( 179) + 0 on 26;
+file . "Eq06-program_counter.vhd" "dbdebcc318682648d2e364fe26684453950cc656" "20220606163700.592":
+  entity program_counter at 4( 71) + 0 on 29;
+  architecture a_program_counter of program_counter at 17( 376) + 0 on 30;

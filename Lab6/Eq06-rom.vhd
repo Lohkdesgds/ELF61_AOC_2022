@@ -9,31 +9,39 @@ entity rom is
 	port(
 		clk: in std_logic;
 		endereco: in unsigned(15 downto 0);
-		dado: out unsigned(7 downto 0) := x"00"
+		dado: out unsigned(15 downto 0) := x"0000"
 	);
 end entity;
 
 architecture a_rom of rom is 
-	-- cria-se um "dicionario" de 0 a 127 contendo unsigned de 8 bits
-	type mem is array(0 to 127) of unsigned(7 downto 0);	
-	-- instruções do programa em sequência
-	-- Sequência esperada: 0, 5, 6, 1, 2, 3, 4, 0... (loop)
+	type mem is array(0 to 127) of unsigned(7 downto 0);
 	constant conteudo_rom : mem := (
-		0 => "11100101", -- Pula pro 5
-		1 => "10000000", -- (nada)    
-		2 => "00000000", -- (nada)    
-		3 => "00000000", -- (nada)    
-		4 => "11100000", -- pula pro 0
-		5 => "00000010", -- (nada)    
-		6 => "11100001", -- pula pro 1
-		7 => "00000010",
-		8 => "00000010",
-		9 => "00000000",
-		10 => "00000000",
+		0  => "1110000001000011",
+		1  => "1110000001010111",
+		2  => "1110000001110000",
+		3  => "0000110001110100",
+		4  => "0000110001110101",
+		5  => "1110000000010010",
+		6  => "0001100001110001",
+		7  => "1100000000001001",
+		8  => "0000000000000000",
+		9  => "0000000000000000",
+		10 => "0000000000000000",
+		11 => "0000000000000000",
+		12 => "0000000000000000",
+		13 => "0000000000000000",
+		14 => "0000000000000000",
+		15 => "0000000000000000",
+		16 => "0000000000000000",
+		17 => "0010110001000111",
+		18 => "0010110001100111",
+		19 => "1110000000100011",
+		20 => "0100000001100010",
+		21 => "1100111111101100",
+		22 => "0000000000000000"
 		others => (others => '0')
 	);
 begin
-
 	process(clk)
 	begin
 		if(rising_edge(clk)) then

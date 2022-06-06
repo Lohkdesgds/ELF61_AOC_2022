@@ -1,4 +1,4 @@
--- Projeto Banco de registradores + ULA
+-- Projeto Banco de registradores + ULA (V2)
 -- Equipe: Ernesto & Ellejeane
 
 library ieee;
@@ -12,18 +12,18 @@ entity ULARegs is
         WE3 : in std_logic;                   -- Write enable
 		OP : in std_logic_vector(1 downto 0); -- Operador (soma, sub, resto)
 		
-        A1 : in unsigned(2 downto 0);         -- Selecionar leitura 1 (arg1)     #2
-        A2 : in unsigned(2 downto 0);         -- Selecionar leitura 2 (arg2)   \ #1
-        A3 : in unsigned(2 downto 0);         -- Selecionar de escrita  (dest) / #0
+        A1 : in unsigned(4 downto 0);         -- Selecionar leitura 1 (arg1)     #2
+        A2 : in unsigned(4 downto 0);         -- Selecionar leitura 2 (arg2)   \ #1
+        A3 : in unsigned(4 downto 0);         -- Selecionar de escrita  (dest) / #0
 		CTE_EXT : in unsigned(15 downto 0);   -- Constante externa
 		
-		SELECT_MUX : in std_logic			  -- Usa constante externa? '1' = sim
+		SELECT_MUX : in std_logic,  		  -- Usa constante externa? '1' = sim
+
+        FLAGZ : out std_logic                 -- Retorno da última operação (se a flag deu 0 ou 1)
     );
 end entity;
 
 architecture a_ULARegs of ULARegs is
-
-constant s_cte_add : std_logic_vector(1 downto 0) := "00"; -- MUX = ULA em ADD 
 
 component ULA 
     port (
@@ -37,9 +37,9 @@ end component;
 component RegisterFile 
     port (
         CLK : in std_logic;                 -- Clock geral
-        A1  : in unsigned(2 downto 0);      -- O selecionar leitura 1
-        A2  : in unsigned(2 downto 0);      -- O selecionar leitura 2
-        A3  : in unsigned(2 downto 0);      -- Selecionar de escrita
+        A1  : in unsigned(4 downto 0);      -- O selecionar leitura 1
+        A2  : in unsigned(4 downto 0);      -- O selecionar leitura 2
+        A3  : in unsigned(4 downto 0);      -- Selecionar de escrita
         WD3 : in unsigned(15 downto 0);     -- Barramento de dados de escrita
         WE3 : in std_logic;                 -- Write enable (clock rise)
         RST : in std_logic;                 -- Zera tudo
@@ -64,9 +64,9 @@ ulaop: ULA port map(
 );
 rf0 : RegisterFile port map(
 	CLK => CLK, 		-- Clock geral
-	A1  => A1, 		-- O selecionar leitura 1
-	A2  => A2, 		-- O selecionar leitura 2
-    A3  => A3, 		-- Selecionar de escrita
+	A1  => A1, 		    -- O selecionar leitura 1
+	A2  => A2, 		    -- O selecionar leitura 2
+    A3  => A3, 		    -- Selecionar de escrita
     WD3 => s_out_ula, 	-- Barramento de dados de escrita
     WE3 => WE3, 		-- Write enable (clock rise)
     RST => RST, 		-- Zera tudo
@@ -75,5 +75,6 @@ rf0 : RegisterFile port map(
 );
 
 s_rd2_final <= s_rd2 when SELECT_MUX = '0' else CTE_EXT;
+FLAGZ <= s_flagz;
 
 end architecture;
