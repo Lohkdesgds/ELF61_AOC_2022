@@ -1,15 +1,15 @@
 [*]
 [*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
-[*] Tue Jun 07 00:56:23 2022
+[*] Tue Jun 07 01:31:28 2022
 [*]
 [dumpfile] "D:\Cloud\Github\TarefasProg\ELF61 - Arquitetura de Computadores\_shared\Lab6\Eq06-Calculadora.ghw"
-[dumpfile_mtime] "Tue Jun 07 00:46:02 2022"
+[dumpfile_mtime] "Tue Jun 07 01:30:01 2022"
 [dumpfile_size] 24841
 [savefile] "D:\Cloud\Github\TarefasProg\ELF61 - Arquitetura de Computadores\_shared\Lab6\Eq06-Calculadora.gtkw"
 [timestart] 0
 [size] 2194 1163
-[pos] -139 -9
-*-30.063581 3742000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[pos] -1 -1
+*-30.063581 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top.
 [treeopen] top.calculadora_tb.
 [treeopen] top.calculadora_tb.poggers.
@@ -21,7 +21,7 @@
 [treeopen] top.calculadora_tb.poggers.ulafun.rf0.reg6.
 [treeopen] top.calculadora_tb.poggers.ulafun.rf0.reg7.
 [sst_width] 355
-[signals_width] 192
+[signals_width] 258
 [sst_expanded] 1
 [sst_vpaned_height] 351
 @28
@@ -31,7 +31,7 @@ top.calculadora_tb.poggers.rst
 @24
 [color] 3
 +{ESTADO} #{top.calculadora_tb.poggers.s_estado[1:0]} top.calculadora_tb.poggers.s_estado[1] top.calculadora_tb.poggers.s_estado[0]
-@22
+@29
 [color] 3
 +{Lido da ROM} #{top.calculadora_tb.poggers.s_dados_rom[15:0]} top.calculadora_tb.poggers.s_dados_rom[15] top.calculadora_tb.poggers.s_dados_rom[14] top.calculadora_tb.poggers.s_dados_rom[13] top.calculadora_tb.poggers.s_dados_rom[12] top.calculadora_tb.poggers.s_dados_rom[11] top.calculadora_tb.poggers.s_dados_rom[10] top.calculadora_tb.poggers.s_dados_rom[9] top.calculadora_tb.poggers.s_dados_rom[8] top.calculadora_tb.poggers.s_dados_rom[7] top.calculadora_tb.poggers.s_dados_rom[6] top.calculadora_tb.poggers.s_dados_rom[5] top.calculadora_tb.poggers.s_dados_rom[4] top.calculadora_tb.poggers.s_dados_rom[3] top.calculadora_tb.poggers.s_dados_rom[2] top.calculadora_tb.poggers.s_dados_rom[1] top.calculadora_tb.poggers.s_dados_rom[0]
 @200
