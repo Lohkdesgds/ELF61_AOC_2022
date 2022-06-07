@@ -184,7 +184,7 @@ begin
 	s_exec_ularegs <= '1' when ((s_opcode_code >= to_unsigned(2, 3) and s_opcode_code <= to_unsigned(6, 3)) and s_estado = c_EXEC) else '0';
 
 	-- outros
-	s_cte_ulareg_interm <= ("0000" & s_cte_ulareg) when s_cte_ulareg(11) = '0' else ("1111" & s_cte_ulareg);
+	s_cte_ulareg_interm <= ("0000" & s_cte_ulareg) when s_cte_ulareg(11) = '0' else ("1111" & s_cte_ulareg); -- funciona pra + e -
 	
 end architecture;
 						
