@@ -1,0 +1,9 @@
+FETCH
+- ROM lê -- OK
+
+DECODE
+- separar instrução em op, Rr, Rd, K -- OK
+
+EXEC
+- usa os valores de op, Rr, Rd e K pra fazer algo -- OK
+- avança PC -- OK
