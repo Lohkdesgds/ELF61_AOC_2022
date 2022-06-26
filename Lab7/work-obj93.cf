@@ -1,0 +1,34 @@
+v 4
+file . "Eq06-Calculadora_tb.vhd" "666d89777656080c7583dd213fec01bb5e847a6d" "20220620215044.538":
+  entity calculadora_tb at 4( 71) + 0 on 31;
+  architecture a_calculadora_tb of calculadora_tb at 11( 179) + 0 on 32;
+file . "Eq06-ULARegs.vhd" "9c7c0e3f884a845f26983ef305cc037638c49570" "20220620215044.370":
+  entity ularegs at 4( 80) + 0 on 27;
+  architecture a_ularegs of ularegs at 26( 967) + 0 on 28;
+file . "Eq06-maq_estados.vhd" "46a84cb897ae431ec9613fccd88988f0281f5af3" "20220620215044.209":
+  entity maq_estados at 5( 78) + 0 on 23;
+  architecture a_maq_estados of maq_estados at 16( 275) + 0 on 24;
+file . "Eq06-opcoder.vhd" "6681f339f969af885bb2e9056d71d572662b2ce0" "20220620215044.046":
+  entity opcoder at 5( 78) + 0 on 19;
+  architecture a_opcoder of opcoder at 16( 285) + 0 on 20;
+file . "Eq06-rom.vhd" "be438b606c2dbe13e909d603d2f5ca3a08ae8b56" "20220620215043.888":
+  entity rom at 4( 50) + 0 on 15;
+  architecture a_rom of rom at 16( 275) + 0 on 16;
+file . "Eq06-reg16bits.vhd" "448b98bd1b93a147e790a00f6351a9bbf31b0c2e" "20220620215043.734":
+  entity reg at 5( 81) + 0 on 11;
+  architecture a_reg of reg at 19( 401) + 0 on 12;
+file . "Eq06-RegFile.vhd" "ae21caf62bcedbf2c10f42e687889b802582d1dd" "20220620215043.816":
+  entity registerfile at 5( 127) + 0 on 13;
+  architecture a_registerfile of registerfile at 23( 868) + 0 on 14;
+file . "Eq06-unidade_somadora.vhd" "c79c9587c0955a325f1f6bb17704802453e68dce" "20220620215043.970":
+  entity unidade_somadora_pc at 5( 78) + 0 on 17;
+  architecture a_unidade_somadora_pc of unidade_somadora_pc at 21( 525) + 0 on 18;
+file . "Eq06-program_counter.vhd" "a61a234572e2aa31171eb5c447d2e30f1c23070d" "20220620215044.134":
+  entity program_counter at 5( 78) + 0 on 21;
+  architecture a_program_counter of program_counter at 18( 383) + 0 on 22;
+file . "Eq06-ULA.vhd" "f1a76191d6c7f8791127f74db5068c24b2ef3a37" "20220620215044.286":
+  entity ula at 5( 62) + 0 on 25;
+  architecture a_ula of ula at 19( 424) + 0 on 26;
+file . "Eq06-Calculadora.vhd" "bffb60706778277f6fb0d92fc4c68e6a01d2b787" "20220620215044.461":
+  entity calculadora at 4( 71) + 0 on 29;
+  architecture a_calculadora of calculadora at 14( 223) + 0 on 30;
