@@ -8,15 +8,15 @@ use ieee.numeric_std.all;
 
 entity RegisterFile is 
     port (
-        CLK : in std_logic;                 -- Clock geral
-        A1  : in unsigned(4 downto 0);      -- O selecionar leitura 1
-        A2  : in unsigned(4 downto 0);      -- O selecionar leitura 2
-        A3  : in unsigned(4 downto 0);      -- Selecionar de escrita
-        WD3 : in unsigned(15 downto 0);     -- Barramento de dados de escrita
-        WE3 : in std_logic;                 -- Write enable (clock rise)
-        RST : in std_logic;                 -- Zera tudo
-        RD1 : out unsigned(15 downto 0);    -- Dados lidos 1
-        RD2 : out unsigned(15 downto 0)     -- Dados lidos 2
+        CLK : in std_logic;                                     -- Clock geral
+        A1  : in unsigned(4 downto 0);                          -- O selecionar leitura 1
+        A2  : in unsigned(4 downto 0);                          -- O selecionar leitura 2
+        A3  : in unsigned(4 downto 0);                          -- Selecionar de escrita
+        WD3 : in unsigned(15 downto 0);                         -- Barramento de dados de escrita
+        WE3 : in std_logic;                                     -- Write enable (clock rise)
+        RST : in std_logic;                                     -- Zera tudo
+        RD1 : out unsigned(15 downto 0) := (others => '0');     -- Dados lidos 1
+        RD2 : out unsigned(15 downto 0) := (others => '0')      -- Dados lidos 2
     );
 end entity;
 
@@ -35,37 +35,37 @@ end component;
 -- select por bit
 signal s_write_select : std_logic_vector(30 downto 0) := (others => '0'); -- 31 bits porque zero eh sempre zero
 -- tudo junto para ficar numa variavel so
-signal s_data_out1 : unsigned(15 downto 0);
-signal s_data_out2 : unsigned(15 downto 0);
-signal s_data_out3 : unsigned(15 downto 0);
-signal s_data_out4 : unsigned(15 downto 0);
-signal s_data_out5 : unsigned(15 downto 0);
-signal s_data_out6 : unsigned(15 downto 0);
-signal s_data_out7 : unsigned(15 downto 0);
-signal s_data_out8 : unsigned(15 downto 0);
-signal s_data_out9 : unsigned(15 downto 0);
-signal s_data_outA : unsigned(15 downto 0);
-signal s_data_outB : unsigned(15 downto 0);
-signal s_data_outC : unsigned(15 downto 0);
-signal s_data_outD : unsigned(15 downto 0);
-signal s_data_outE : unsigned(15 downto 0);
-signal s_data_outF : unsigned(15 downto 0);
-signal s_data_outG : unsigned(15 downto 0);
-signal s_data_outH : unsigned(15 downto 0);
-signal s_data_outI : unsigned(15 downto 0);
-signal s_data_outJ : unsigned(15 downto 0);
-signal s_data_outK : unsigned(15 downto 0);
-signal s_data_outL : unsigned(15 downto 0);
-signal s_data_outM : unsigned(15 downto 0);
-signal s_data_outN : unsigned(15 downto 0);
-signal s_data_outO : unsigned(15 downto 0);
-signal s_data_outP : unsigned(15 downto 0);
-signal s_data_outQ : unsigned(15 downto 0);
-signal s_data_outR : unsigned(15 downto 0);
-signal s_data_outS : unsigned(15 downto 0);
-signal s_data_outT : unsigned(15 downto 0);
-signal s_data_outU : unsigned(15 downto 0);
-signal s_data_outV : unsigned(15 downto 0);
+signal s_data_out1 : unsigned(15 downto 0) := (others => '0');
+signal s_data_out2 : unsigned(15 downto 0) := (others => '0');
+signal s_data_out3 : unsigned(15 downto 0) := (others => '0');
+signal s_data_out4 : unsigned(15 downto 0) := (others => '0');
+signal s_data_out5 : unsigned(15 downto 0) := (others => '0');
+signal s_data_out6 : unsigned(15 downto 0) := (others => '0');
+signal s_data_out7 : unsigned(15 downto 0) := (others => '0');
+signal s_data_out8 : unsigned(15 downto 0) := (others => '0');
+signal s_data_out9 : unsigned(15 downto 0) := (others => '0');
+signal s_data_outA : unsigned(15 downto 0) := (others => '0');
+signal s_data_outB : unsigned(15 downto 0) := (others => '0');
+signal s_data_outC : unsigned(15 downto 0) := (others => '0');
+signal s_data_outD : unsigned(15 downto 0) := (others => '0');
+signal s_data_outE : unsigned(15 downto 0) := (others => '0');
+signal s_data_outF : unsigned(15 downto 0) := (others => '0');
+signal s_data_outG : unsigned(15 downto 0) := (others => '0');
+signal s_data_outH : unsigned(15 downto 0) := (others => '0');
+signal s_data_outI : unsigned(15 downto 0) := (others => '0');
+signal s_data_outJ : unsigned(15 downto 0) := (others => '0');
+signal s_data_outK : unsigned(15 downto 0) := (others => '0');
+signal s_data_outL : unsigned(15 downto 0) := (others => '0');
+signal s_data_outM : unsigned(15 downto 0) := (others => '0');
+signal s_data_outN : unsigned(15 downto 0) := (others => '0');
+signal s_data_outO : unsigned(15 downto 0) := (others => '0');
+signal s_data_outP : unsigned(15 downto 0) := (others => '0');
+signal s_data_outQ : unsigned(15 downto 0) := (others => '0');
+signal s_data_outR : unsigned(15 downto 0) := (others => '0');
+signal s_data_outS : unsigned(15 downto 0) := (others => '0');
+signal s_data_outT : unsigned(15 downto 0) := (others => '0');
+signal s_data_outU : unsigned(15 downto 0) := (others => '0');
+signal s_data_outV : unsigned(15 downto 0) := (others => '0');
 
 begin
 -- 00 sempre 0

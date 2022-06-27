@@ -15,7 +15,7 @@ architecture a_Calculadora_tb of Calculadora_tb is
 	);
 	end component;
 	
-	signal s_clk, s_rst: std_logic;
+	signal s_clk, s_rst: std_logic := '0';
 begin
 	poggers: Calculadora port map(
 		clk => s_clk,

@@ -12,12 +12,12 @@ entity REG is
         rst      : in std_logic;
         wr_en    : in std_logic;
         data_in  : in unsigned(15 downto 0);
-        data_out : out unsigned(15 downto 0)
+        data_out : out unsigned(15 downto 0) := (others => '0')
     );
 end entity;
 
 architecture a_REG of REG is
-signal s_registro : unsigned(15 downto 0) := "0000000000000000";
+signal s_registro : unsigned(15 downto 0) := (others => '0');
 begin
 
 data_out <= s_registro;
@@ -25,7 +25,7 @@ data_out <= s_registro;
 process(clk, rst, wr_en)
 begin
     if (rst = '1') then
-        s_registro <= "0000000000000000";
+        s_registro <= (others => '0');
     elsif (rising_edge(clk) and wr_en = '1') then
         s_registro <= data_in;
     end if;

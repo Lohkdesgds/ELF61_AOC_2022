@@ -7,19 +7,19 @@ use ieee.numeric_std.all;
 
 entity ULARegs is 
     port (
-        CLK : in std_logic;                   -- Clock geral
-        RST : in std_logic;                   -- Zera tudo
-        WE3 : in std_logic;                   -- Write enable
-		OP : in std_logic_vector(1 downto 0); -- Operador (soma, sub, resto)
+        CLK : in std_logic;                         -- Clock geral
+        RST : in std_logic;                         -- Zera tudo
+        WE3 : in std_logic;                         -- Write enable
+		OP : in std_logic_vector(1 downto 0);       -- Operador (soma, sub, resto)
 		
-        A1 : in unsigned(4 downto 0);         -- Selecionar leitura 1 (arg1)     #2
-        A2 : in unsigned(4 downto 0);         -- Selecionar leitura 2 (arg2)   \ #1
-        A3 : in unsigned(4 downto 0);         -- Selecionar de escrita  (dest) / #0
-		CTE_EXT : in unsigned(15 downto 0);   -- Constante externa
+        A1 : in unsigned(4 downto 0);               -- Selecionar leitura 1 (arg1)     #2
+        A2 : in unsigned(4 downto 0);               -- Selecionar leitura 2 (arg2)   \ #1
+        A3 : in unsigned(4 downto 0);               -- Selecionar de escrita  (dest) / #0
+		CTE_EXT : in unsigned(15 downto 0);         -- Constante externa
 		
-		SELECT_MUX : in std_logic;  		  -- Usa constante externa? '1' = sim
+		SELECT_MUX : in std_logic;  		        -- Usa constante externa? '1' = sim
 
-        FLAGZ : out std_logic                 -- Retorno da última operação (se a flag deu 0 ou 1)
+        FLAGZ : out std_logic := '0'                -- Retorno da última operação (se a flag deu 0 ou 1)
     );
 end entity;
 
@@ -48,11 +48,11 @@ component RegisterFile
     );
 end component;
 
-signal s_flagz : std_logic;
-signal s_rd1 : unsigned(15 downto 0); 		-- SAIDA 1 RegisterFile (ligada direto)
-signal s_rd2 : unsigned(15 downto 0); 		-- SAIDA 2 (nao selecionada, constante externa)
-signal s_rd2_final : unsigned(15 downto 0); -- SAIDA 2 (rd2 ou constante externa)
-signal s_out_ula : unsigned(15 downto 0); 	-- saida ULA, entrada RegisterFile (write)
+signal s_flagz : std_logic := '0';
+signal s_rd1 : unsigned(15 downto 0) := (others => '0'); 		-- SAIDA 1 RegisterFile (ligada direto)
+signal s_rd2 : unsigned(15 downto 0) := (others => '0'); 		-- SAIDA 2 (nao selecionada, constante externa)
+signal s_rd2_final : unsigned(15 downto 0) := (others => '0');  -- SAIDA 2 (rd2 ou constante externa)
+signal s_out_ula : unsigned(15 downto 0) := (others => '0'); 	-- saida ULA, entrada RegisterFile (write)
 
 begin
 ulaop: ULA port map(

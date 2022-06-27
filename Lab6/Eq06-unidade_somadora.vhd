@@ -13,7 +13,7 @@ use ieee.numeric_std.all;
 entity unidade_somadora_pc is 
 	port (
 		pc_now: in unsigned(15 downto 0);
-		pc_next: out unsigned(15 downto 0)
+		pc_next: out unsigned(15 downto 0) := (others => '0')
 	);
 end entity;
 

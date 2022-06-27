@@ -29,6 +29,6 @@ s_out <=
 
 out_ULA <= s_out;
 
-flagZ <= '1' when s_out = (others => '0') else '0';
+flagZ <= '1' when s_out = x"0000" else '0';
 
 end architecture;
