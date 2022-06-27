@@ -11,6 +11,6 @@ helper.exe "ghdl -a Eq06-ULARegs.vhd"
 helper.exe "ghdl -a Eq06-RegFlags.vhd"
 helper.exe "ghdl -a Eq06-Calculadora.vhd"
 helper.exe "ghdl -a Eq06-Calculadora_tb.vhd"
-helper.exe "ghdl -r Calculadora_tb --stop-time=21000ns --wave=Eq06-Calc.ghw" 
+helper.exe "ghdl -r Calculadora_tb --stop-time=500000ns --wave=Eq06-Calc.ghw" 
 helper.exe "gtkw Eq06-Calc.ghw --save Eq06-Calc.gtkw"
 :: pause

@@ -26,8 +26,6 @@ architecture a_Calculadora of Calculadora is
 	constant c_op_LDI : unsigned(2 downto 0) := "110"; -- LDI
 	constant c_op_RJMP: unsigned(2 downto 0) := "111"; -- RJMP
 
-	--constant c_flag_ZEROED : unsigned(1 downto 0) := "01"; -- flag no 1
-
 	component ULARegs is 
 	port (
 		CLK : in std_logic;                   -- Clock geral
@@ -85,11 +83,11 @@ architecture a_Calculadora of Calculadora is
 	
 	component RegisterFlags is 
 	port (
-		CLK          : in std_logic; -- CLK
-		WE           : in std_logic; -- Write enable
-		FLAGS_STORE  : in std_logic; -- Ultimas flags (atualmente ZERO so)
-		FLAGS_READ   : out std_logic; -- Flags salvas (atualmente ZERO so)
-		RST          : in std_logic  -- Zera tudo
+		CLK          : in std_logic;
+		WE           : in std_logic;
+		FLAGS_STORE  : in std_logic;
+		FLAGS_READ   : out std_logic;
+		RST          : in std_logic
 	);
 	end component;
 
@@ -99,7 +97,7 @@ architecture a_Calculadora of Calculadora is
 	signal s_next_pc : unsigned(15 downto 0) := (others => '0');
 
 	-- estado
-	signal s_estado : unsigned(1 downto 0) := "00";
+	signal s_estado : unsigned(1 downto 0) := (others => '0');
 
 	-- flags:
 	signal s_ler_rom : std_logic := '0';
@@ -125,13 +123,10 @@ architecture a_Calculadora of Calculadora is
 
 	-- casos
 	signal s_is_cte : std_logic := '0'; -- relacionado com s_cte_ulareg, usar constante externa?
-	signal s_op_ulareg : std_logic_vector(1 downto 0); -- usado se opcode_asm for do tipo add, sub ou rem
+	signal s_op_ulareg : std_logic_vector(1 downto 0) := (others => '0'); -- usado se opcode_asm for do tipo add, sub ou rem
 
 	-- sinais conectados 
 	signal s_cte_ulareg_interm : unsigned(15 downto 0) := (others => '0'); -- o meio entre s_cte_ulareg e onde será definido
-
-	-- sinais para facilitar a leitura no GTKWave
-	signal s_instr_counter_inf : unsigned(31 downto 0) := (others => '0'); -- conta infinitamente sempre em CLK'event e FETCH
 begin 
 	mah_flags : RegisterFlags port map(
 		CLK => clk,
@@ -190,19 +185,21 @@ begin
 		(s_dados_rom(8 downto 4)) when (s_opcode_code >= to_unsigned(2, 3) and s_opcode_code <= to_unsigned(5, 3)) else
 		('0' & s_dados_rom(7 downto 4)) when s_opcode_code = 6 else
 		(others => '0');
-	s_cte_ulareg <=
-		("00000" & s_dados_rom(9 downto 3)) when ((s_opcode_code = to_unsigned(1, 3))) else
-		("0000" & s_dados_rom(11 downto 8) & s_dados_rom(3 downto 0)) when (s_opcode_code = to_unsigned(6, 3)) else
+	s_cte_ulareg <= -- ajustado para casos negativos
+		("00000" & s_dados_rom(9 downto 3)) when ((s_opcode_code = to_unsigned(1, 3)) and s_dados_rom(9) = '0') else
+		("11111" & s_dados_rom(9 downto 3)) when ((s_opcode_code = to_unsigned(1, 3)) and s_dados_rom(9) = '1') else
+		("0000" & s_dados_rom(11 downto 8) & s_dados_rom(3 downto 0)) when (s_opcode_code = to_unsigned(6, 3) and s_dados_rom(11) = '0') else
+		("1111" & s_dados_rom(11 downto 8) & s_dados_rom(3 downto 0)) when (s_opcode_code = to_unsigned(6, 3) and s_dados_rom(11) = '1') else
 		(s_dados_rom(11 downto 0)) when (s_opcode_code = to_unsigned(7, 3)) else 
 		(others => '0');
 
 	s_op_ulareg <=
-		"01" when s_opcode_code = to_unsigned(3, 3) else
-		"10" when s_opcode_code = to_unsigned(4, 3) else
-		"11" when s_opcode_code = to_unsigned(5, 3) else
-		"00";
+		"00" when s_opcode_code = to_unsigned(2, 3) else -- add
+		"01" when s_opcode_code = to_unsigned(3, 3) else -- sub
+		"10" when s_opcode_code = to_unsigned(4, 3) else -- rem
+		"11" when s_opcode_code = to_unsigned(5, 3) or s_opcode_code = to_unsigned(6, 3) or s_opcode_code = to_unsigned(0, 3) else -- mov, ldi, nop
+		"00"; -- rjmp, brne
 		
-	--s_zdelay <= '1' when s_lastcase_flagz_true = '1' and s_estado = c_EXEC else '0' when s_lastcase_flagz_true = '0' and s_estado = c_DECODE and s_opcode_code /= to_unsigned(1, 3) else s_zdelay;
 	s_calcnext_pc <= (s_cte_ulareg_interm + s_pc) when (s_opcode_code = to_unsigned(7, 3)) or (s_opcode_code = to_unsigned(1, 3) and s_flags_inuse = '1') else s_pc;
 		
 	-- EXEC
@@ -212,15 +209,9 @@ begin
 	s_exec_ularegs <= '1' when ((s_opcode_code >= to_unsigned(2, 3) and s_opcode_code <= to_unsigned(6, 3)) and s_estado = c_EXEC) else '0';
 
 	-- outros
-	s_cte_ulareg_interm <= ("0000" & s_cte_ulareg) when s_cte_ulareg(11) = '0' else ("1111" & s_cte_ulareg); -- funciona pra + e -
-
--- DEBUG: (desconsiderar num projeto final, mas extremamente útil para ler no GTKWave)
-process(s_estado)
-begin
-	if (s_estado = c_FETCH) then
-		s_instr_counter_inf <= s_instr_counter_inf + 1;
-	end if;
-end process;
+	s_cte_ulareg_interm <= 
+		("1111" & s_cte_ulareg) when s_cte_ulareg(11) = '1' else
+		("0000" & s_cte_ulareg); -- funciona pra + e -
 	
 end architecture;
 						

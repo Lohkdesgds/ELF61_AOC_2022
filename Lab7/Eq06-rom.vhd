@@ -9,7 +9,7 @@ entity rom is
 	port(
 		clk: in std_logic;
 		endereco: in unsigned(15 downto 0);
-		dado: out unsigned(15 downto 0) := x"0000"
+		dado: out unsigned(15 downto 0) := (others => '0')
 	);
 end entity;
 

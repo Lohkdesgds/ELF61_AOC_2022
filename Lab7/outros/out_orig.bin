@@ -1,0 +1,20 @@
+1110000001100000 ; ldi R6, #0 ; Contagem de primos [0]
+1110000001110001 ; ldi R7, #1 ; Ultimo primo valido
+1110000001000001 ; ldi R4, #1 ; constante
+1110000000010001 ; ldi R1, #1 ; Teste do primo em si
+0000110000010100 ; add R1, R4 ; LOOP: avança R1
+1111010001100001 ; brne #12 ; Se R1 deu 0, pula FINALIZE
+1110000000100010 ; ldi R2, #2 ; Inicia teste com 2
+0010110000110001 ; mov R3, R1 ; INNERLOOP:
+0001100000110010 ; sub R3, R2
+1111010000101001 ; brne #5 ; Se R3 der zero, PRIMO, goto GOOD
+0010110000110001 ; mov R3, R1
+0100000000110010 ; rem R3, R2
+1111011110111001 ; brne #-9 ; Volta para LOOP
+0000110000100100 ; add R2, R4
+1100111111111000 ; rjmp #-8 ; Volta para INNERLOOP
+0010110001110001 ; mov R7, R1 ; GOOD: copia R1 para R7
+0000110001100100 ; add R6, R4 ; incrementa contagem de primo
+1100111111110010 ; rjmp #-14 ; volta para LOOP
+0000000000000000 ; nop
+1100111111111111 ; rjmp #-1 ; FINALIZE: morre

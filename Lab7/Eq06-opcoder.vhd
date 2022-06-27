@@ -9,7 +9,7 @@ use ieee.numeric_std.all;
 entity opcoder is
    port(
       rawop : in unsigned(8 downto 0);
-      instrcode : out unsigned(2 downto 0)
+      instrcode : out unsigned(2 downto 0) := (others => '0')
 	);
 end entity;
 

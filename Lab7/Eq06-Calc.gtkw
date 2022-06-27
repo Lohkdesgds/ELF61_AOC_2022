@@ -1,19 +1,18 @@
 [*]
 [*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
-[*] Mon Jun 27 04:25:18 2022
+[*] Mon Jun 27 06:09:18 2022
 [*]
 [dumpfile] "D:\Cloud\Github\TarefasProg\ELF61 - Arquitetura de Computadores\_shared\Lab7\Eq06-Calc.ghw"
-[dumpfile_mtime] "Mon Jun 27 04:19:55 2022"
-[dumpfile_size] 25544
+[dumpfile_mtime] "Mon Jun 27 06:08:27 2022"
+[dumpfile_size] 408417
 [savefile] "D:\Cloud\Github\TarefasProg\ELF61 - Arquitetura de Computadores\_shared\Lab7\Eq06-Calc.gtkw"
 [timestart] 0
 [size] 1920 1009
-[pos] 2265 -25
-*-29.535625 175000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[pos] 2447 157
+*-36.100643 950000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 [treeopen] top.
 [treeopen] top.calculadora_tb.
 [treeopen] top.calculadora_tb.poggers.
-[treeopen] top.calculadora_tb.poggers.ulafun.rf0.
 [treeopen] top.calculadora_tb.poggers.ulafun.rf0.reg1.
 [treeopen] top.calculadora_tb.poggers.ulafun.rf0.reg2.
 [treeopen] top.calculadora_tb.poggers.ulafun.rf0.reg3.
@@ -22,7 +21,7 @@
 [treeopen] top.calculadora_tb.poggers.ulafun.rf0.reg6.
 [treeopen] top.calculadora_tb.poggers.ulafun.rf0.reg7.
 [sst_width] 197
-[signals_width] 245
+[signals_width] 314
 [sst_expanded] 1
 [sst_vpaned_height] 297
 @28
@@ -33,8 +32,10 @@ top.calculadora_tb.s_rst
 @28
 #{top.calculadora_tb.poggers.s_dados_rom[15:0]} top.calculadora_tb.poggers.s_dados_rom[15] top.calculadora_tb.poggers.s_dados_rom[14] top.calculadora_tb.poggers.s_dados_rom[13] top.calculadora_tb.poggers.s_dados_rom[12] top.calculadora_tb.poggers.s_dados_rom[11] top.calculadora_tb.poggers.s_dados_rom[10] top.calculadora_tb.poggers.s_dados_rom[9] top.calculadora_tb.poggers.s_dados_rom[8] top.calculadora_tb.poggers.s_dados_rom[7] top.calculadora_tb.poggers.s_dados_rom[6] top.calculadora_tb.poggers.s_dados_rom[5] top.calculadora_tb.poggers.s_dados_rom[4] top.calculadora_tb.poggers.s_dados_rom[3] top.calculadora_tb.poggers.s_dados_rom[2] top.calculadora_tb.poggers.s_dados_rom[1] top.calculadora_tb.poggers.s_dados_rom[0]
 @24
-#{top.calculadora_tb.poggers.s_cte_ulareg[11:0]} top.calculadora_tb.poggers.s_cte_ulareg[11] top.calculadora_tb.poggers.s_cte_ulareg[10] top.calculadora_tb.poggers.s_cte_ulareg[9] top.calculadora_tb.poggers.s_cte_ulareg[8] top.calculadora_tb.poggers.s_cte_ulareg[7] top.calculadora_tb.poggers.s_cte_ulareg[6] top.calculadora_tb.poggers.s_cte_ulareg[5] top.calculadora_tb.poggers.s_cte_ulareg[4] top.calculadora_tb.poggers.s_cte_ulareg[3] top.calculadora_tb.poggers.s_cte_ulareg[2] top.calculadora_tb.poggers.s_cte_ulareg[1] top.calculadora_tb.poggers.s_cte_ulareg[0]
 #{top.calculadora_tb.poggers.s_calcnext_pc[15:0]} top.calculadora_tb.poggers.s_calcnext_pc[15] top.calculadora_tb.poggers.s_calcnext_pc[14] top.calculadora_tb.poggers.s_calcnext_pc[13] top.calculadora_tb.poggers.s_calcnext_pc[12] top.calculadora_tb.poggers.s_calcnext_pc[11] top.calculadora_tb.poggers.s_calcnext_pc[10] top.calculadora_tb.poggers.s_calcnext_pc[9] top.calculadora_tb.poggers.s_calcnext_pc[8] top.calculadora_tb.poggers.s_calcnext_pc[7] top.calculadora_tb.poggers.s_calcnext_pc[6] top.calculadora_tb.poggers.s_calcnext_pc[5] top.calculadora_tb.poggers.s_calcnext_pc[4] top.calculadora_tb.poggers.s_calcnext_pc[3] top.calculadora_tb.poggers.s_calcnext_pc[2] top.calculadora_tb.poggers.s_calcnext_pc[1] top.calculadora_tb.poggers.s_calcnext_pc[0]
+@28
+[color] 6
+top.calculadora_tb.poggers.s_flags_inuse
 @c00024
 [color] 2
 #{top.calculadora_tb.poggers.s_pc[15:0]} top.calculadora_tb.poggers.s_pc[15] top.calculadora_tb.poggers.s_pc[14] top.calculadora_tb.poggers.s_pc[13] top.calculadora_tb.poggers.s_pc[12] top.calculadora_tb.poggers.s_pc[11] top.calculadora_tb.poggers.s_pc[10] top.calculadora_tb.poggers.s_pc[9] top.calculadora_tb.poggers.s_pc[8] top.calculadora_tb.poggers.s_pc[7] top.calculadora_tb.poggers.s_pc[6] top.calculadora_tb.poggers.s_pc[5] top.calculadora_tb.poggers.s_pc[4] top.calculadora_tb.poggers.s_pc[3] top.calculadora_tb.poggers.s_pc[2] top.calculadora_tb.poggers.s_pc[1] top.calculadora_tb.poggers.s_pc[0]
@@ -57,9 +58,6 @@ top.calculadora_tb.poggers.s_pc[1]
 top.calculadora_tb.poggers.s_pc[0]
 @1401200
 -group_end
-@28
-[color] 1
-top.calculadora_tb.poggers.s_lastcase_flagz_true
 @200
 -= REGISTRADORES =
 @24
@@ -68,10 +66,30 @@ top.calculadora_tb.poggers.s_lastcase_flagz_true
 +{R3} #{top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[15:0]} top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[15] top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[14] top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[13] top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[12] top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[11] top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[10] top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[9] top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[8] top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[7] top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[6] top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[5] top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[4] top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[3] top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[2] top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[1] top.calculadora_tb.poggers.ulafun.rf0.reg3.s_registro[0]
 +{R4} #{top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[15:0]} top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[15] top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[14] top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[13] top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[12] top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[11] top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[10] top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[9] top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[8] top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[7] top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[6] top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[5] top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[4] top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[3] top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[2] top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[1] top.calculadora_tb.poggers.ulafun.rf0.reg4.s_registro[0]
 +{R5} #{top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[15:0]} top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[15] top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[14] top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[13] top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[12] top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[11] top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[10] top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[9] top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[8] top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[7] top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[6] top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[5] top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[4] top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[3] top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[2] top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[1] top.calculadora_tb.poggers.ulafun.rf0.reg5.s_registro[0]
-+{R6} #{top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[15:0]} top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[15] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[14] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[13] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[12] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[11] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[10] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[9] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[8] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[7] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[6] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[5] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[4] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[3] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[2] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[1] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[0]
 @25
+[color] 1
++{R6} #{top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[15:0]} top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[15] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[14] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[13] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[12] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[11] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[10] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[9] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[8] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[7] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[6] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[5] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[4] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[3] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[2] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[1] top.calculadora_tb.poggers.ulafun.rf0.reg6.s_registro[0]
+@c00024
+[color] 1
 +{R7} #{top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[15:0]} top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[15] top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[14] top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[13] top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[12] top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[11] top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[10] top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[9] top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[8] top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[7] top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[6] top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[5] top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[4] top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[3] top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[2] top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[1] top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[0]
-@24
-#{top.calculadora_tb.poggers.s_opcode_code[2:0]} top.calculadora_tb.poggers.s_opcode_code[2] top.calculadora_tb.poggers.s_opcode_code[1] top.calculadora_tb.poggers.s_opcode_code[0]
+@28
+top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[15]
+top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[14]
+top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[13]
+top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[12]
+top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[11]
+top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[10]
+top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[9]
+top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[8]
+top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[7]
+top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[6]
+top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[5]
+top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[4]
+top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[3]
+top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[2]
+top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[1]
+top.calculadora_tb.poggers.ulafun.rf0.reg7.s_registro[0]
+@1401200
+-group_end
 [pattern_trace] 1
 [pattern_trace] 0
