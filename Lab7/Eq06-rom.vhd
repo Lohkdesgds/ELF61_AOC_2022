@@ -16,26 +16,15 @@ end entity;
 architecture a_rom of rom is 
 	type mem is array(0 to 127) of unsigned(15 downto 0);
 	constant conteudo_rom : mem := (
-        0  => "1110000001100000", -- ldi R6, #0 ; Contagem de primos [0]
-        1  => "1110000001110001", -- ldi R7, #1 ; Ultimo primo valido
-        2  => "1110000001000001", -- ldi R4, #1 ; constante
-        3  => "1110000000010001", -- ldi R1, #1 ; Teste do primo em si
-        4  => "0000110000010100", -- add R1, R4 ; LOOP: avança R1
-        5  => "1111010001100001", -- brne #12 ; Se R1 deu 0, pula FINALIZE
-        6  => "1110000000100010", -- ldi R2, #2 ; Inicia teste com 2
-        7  => "0010110000110001", -- mov R3, R1 ; INNERLOOP:
-        8  => "0001100000110010", -- sub R3, R2
-        9  => "1111010000101001", -- brne #5 ; Se R3 der zero, PRIMO, goto GOOD
-        10 => "0010110000110001", -- mov R3, R1
-        11 => "0100000000110010", -- rem R3, R2
-        12 => "1111011110111001", -- brne #-9 ; Volta para LOOP
-        13 => "0000110000100100", -- add R2, R4
-        14 => "1100111111111000", -- rjmp #-8 ; Volta para INNERLOOP
-        15 => "0010110001110001", -- mov R7, R1 ; GOOD: copia R1 para R7
-        16 => "0000110001100100", -- add R6, R4 ; incrementa contagem de primo
-        17 => "1100111111110010", -- rjmp #-14 ; volta para LOOP
-        18 => "0000000000000000", -- nop
-        19 => "1100111111111111", -- rjmp #-1 ; FINALIZE: morre
+        0 => "1110000001011010", -- ldi R5, #10
+        1 => "1110000000110001", -- ldi R3, #1
+        2 => "1110000001000101", -- ldi R4, #5 ; 5x
+        3 => "1110000000100000", -- ldi R2, #0 ; salvar em R2 <= 10 * 5
+        4 => "0000110000100101", -- add R2, R5
+        5 => "0001100001000011", -- sub R4, R3
+        6 => "1111010000001001", -- brne #1 ; se R4 == 0, pula 1 linha
+        7 => "1100111111111100", -- rjmp #-4 ; se não pulou, volta pro add
+        8 => "1100111111111111", -- rjmp #-1 ; senão trava loop infinito
 		others => (others => '0')
 	);
 begin

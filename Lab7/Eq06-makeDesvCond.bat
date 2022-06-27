@@ -11,6 +11,6 @@ ghdl -a Eq06-ULARegs.vhd
 ghdl -a Eq06-RegFlags.vhd
 ghdl -a Eq06-Calculadora.vhd
 ghdl -a Eq06-Calculadora_tb.vhd
-ghdl -r Calculadora_tb --stop-time=500000ns --wave=Eq06-Calc.ghw"
-:: gtkw Eq06-Calc.ghw --save Eq06-Calc.gtkw
+ghdl -r Calculadora_tb --stop-time=10us --wave=Eq06-DesvCond.ghw
+:: gtkw Eq06-DesvCond.ghw --save Eq06-DesvCond.gtkw
 :: pause
