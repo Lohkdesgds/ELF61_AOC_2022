@@ -48,7 +48,7 @@ component RegisterFile
     );
 end component;
 
-signal s_flagz : std_logic;
+signal s_flagz : std_logic := '0';
 signal s_rd1 : unsigned(15 downto 0); 		-- SAIDA 1 RegisterFile (ligada direto)
 signal s_rd2 : unsigned(15 downto 0); 		-- SAIDA 2 (nao selecionada, constante externa)
 signal s_rd2_final : unsigned(15 downto 0); -- SAIDA 2 (rd2 ou constante externa)

@@ -26,6 +26,8 @@ architecture a_Calculadora of Calculadora is
 	constant c_op_LDI : unsigned(2 downto 0) := "110"; -- LDI
 	constant c_op_RJMP: unsigned(2 downto 0) := "111"; -- RJMP
 
+	--constant c_flag_ZEROED : unsigned(1 downto 0) := "01"; -- flag no 1
+
 	component ULARegs is 
 	port (
 		CLK : in std_logic;                   -- Clock geral
@@ -80,6 +82,16 @@ architecture a_Calculadora of Calculadora is
 		instrcode : out unsigned(2 downto 0)
 	);
 	end component;
+	
+	component RegisterFlags is 
+	port (
+		CLK          : in std_logic; -- CLK
+		WE           : in std_logic; -- Write enable
+		FLAGS_STORE  : in std_logic; -- Ultimas flags (atualmente ZERO so)
+		FLAGS_READ   : out std_logic; -- Flags salvas (atualmente ZERO so)
+		RST          : in std_logic  -- Zera tudo
+	);
+	end component;
 
 	-- PC
 	signal s_pc : unsigned(15 downto 0) := (others => '0');
@@ -106,14 +118,28 @@ architecture a_Calculadora of Calculadora is
 	signal s_instr_rr : unsigned(4 downto 0) := (others => '0'); -- read
 	signal s_cte_ulareg : unsigned(11 downto 0) := (others => '0'); -- nossa impl tem constante até 12 bits
 
+	-- flag stuff	
+	signal s_storeflag : std_logic := '0'; -- flag pra salvar flags (write enable)
+	signal s_flags_tostore : std_logic := '0'; -- links para salvar
+	signal s_flags_inuse : std_logic := '0'; -- em uso no código
+
 	-- casos
-	signal s_lastcase_flagz_true : std_logic := '0'; -- flagz para brne
 	signal s_is_cte : std_logic := '0'; -- relacionado com s_cte_ulareg, usar constante externa?
 	signal s_op_ulareg : std_logic_vector(1 downto 0); -- usado se opcode_asm for do tipo add, sub ou rem
 
 	-- sinais conectados 
 	signal s_cte_ulareg_interm : unsigned(15 downto 0) := (others => '0'); -- o meio entre s_cte_ulareg e onde será definido
+
+	-- sinais para facilitar a leitura no GTKWave
+	signal s_instr_counter_inf : unsigned(31 downto 0) := (others => '0'); -- conta infinitamente sempre em CLK'event e FETCH
 begin 
+	mah_flags : RegisterFlags port map(
+		CLK => clk,
+		WE => s_storeflag,
+		FLAGS_STORE => s_flags_tostore,
+		FLAGS_READ => s_flags_inuse,
+		RST => rst
+	);
 	pc_sum : unidade_somadora_pc port map(
 		pc_now => s_calcnext_pc,
 		pc_next => s_next_pc
@@ -145,7 +171,7 @@ begin
 		A3 => s_instr_rd,
 		CTE_EXT => s_cte_ulareg_interm,
 		SELECT_MUX => s_is_cte,
-		FLAGZ => s_lastcase_flagz_true
+		FLAGZ => s_flags_tostore
 	);
 	raaaw : opcoder port map(
 		rawop => s_opcode_asm,
@@ -153,7 +179,7 @@ begin
 	);
 
 	-- FETCH
-	s_ler_rom <= '1' when  s_estado = c_FETCH else '0';
+	s_ler_rom <= '1' when s_estado = c_FETCH else '0';
 
 	-- DECODE
 	s_opcode_asm <= (s_dados_rom(15 downto 10) & s_dados_rom(2 downto 0)); -- separa até 9
@@ -176,15 +202,25 @@ begin
 		"11" when s_opcode_code = to_unsigned(5, 3) else
 		"00";
 		
-	s_calcnext_pc <= (s_cte_ulareg_interm + s_pc) when (s_opcode_code = to_unsigned(7, 3)) or (s_opcode_code = to_unsigned(1, 3) and s_lastcase_flagz_true = '0') else s_pc;
+	--s_zdelay <= '1' when s_lastcase_flagz_true = '1' and s_estado = c_EXEC else '0' when s_lastcase_flagz_true = '0' and s_estado = c_DECODE and s_opcode_code /= to_unsigned(1, 3) else s_zdelay;
+	s_calcnext_pc <= (s_cte_ulareg_interm + s_pc) when (s_opcode_code = to_unsigned(7, 3)) or (s_opcode_code = to_unsigned(1, 3) and s_flags_inuse = '1') else s_pc;
 		
 	-- EXEC
+	s_storeflag <= '1' when s_estado = c_EXEC else '0';
 	s_avancar_pc <= '1' when s_estado = c_EXEC else '0';
 	s_is_cte <= '1' when s_opcode_code = to_unsigned(1, 3) or (s_opcode_code >= to_unsigned(6, 3) and s_opcode_code <= to_unsigned(7, 3)) else '0';
 	s_exec_ularegs <= '1' when ((s_opcode_code >= to_unsigned(2, 3) and s_opcode_code <= to_unsigned(6, 3)) and s_estado = c_EXEC) else '0';
 
 	-- outros
 	s_cte_ulareg_interm <= ("0000" & s_cte_ulareg) when s_cte_ulareg(11) = '0' else ("1111" & s_cte_ulareg); -- funciona pra + e -
+
+-- DEBUG: (desconsiderar num projeto final, mas extremamente útil para ler no GTKWave)
+process(s_estado)
+begin
+	if (s_estado = c_FETCH) then
+		s_instr_counter_inf <= s_instr_counter_inf + 1;
+	end if;
+end process;
 	
 end architecture;
 						
