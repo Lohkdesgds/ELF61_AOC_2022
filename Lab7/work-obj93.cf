@@ -1,0 +1,37 @@
+v 4
+file . "Eq06-Calculadora_tb.vhd" "9e853878b94b6ff57d3bc153015503c60c2bdf13" "20220627065523.703":
+  entity calculadora_tb at 4( 71) + 0 on 81;
+  architecture a_calculadora_tb of calculadora_tb at 11( 179) + 0 on 82;
+file . "Eq06-RegFlags.vhd" "afe8fb81691f6fc19de271d134ea5224e76ffa9e" "20220627065523.608":
+  entity registerflags at 4( 64) + 0 on 77;
+  architecture a_registerflags of registerflags at 20( 707) + 0 on 78;
+file . "Eq06-ULA.vhd" "4b0b3c002c6d232e4f04d500399824d417048b41" "20220627065523.498":
+  entity ula at 5( 62) + 0 on 73;
+  architecture a_ula of ula at 19( 450) + 0 on 74;
+file . "Eq06-program_counter.vhd" "3cd9e4e2471b4de955c75dd4f1a9c6e1c72402ad" "20220627065523.402":
+  entity program_counter at 5( 78) + 0 on 69;
+  architecture a_program_counter of program_counter at 18( 402) + 0 on 70;
+file . "Eq06-unidade_somadora.vhd" "725a8a4118cba54f12136d6421d5ee67ad339cb1" "20220627065523.307":
+  entity unidade_somadora_pc at 5( 78) + 0 on 65;
+  architecture a_unidade_somadora_pc of unidade_somadora_pc at 21( 544) + 0 on 66;
+file . "Eq06-RegFile.vhd" "7642ae494a86f927e5d90201b7d25ca133461078" "20220627065523.212":
+  entity registerfile at 5( 127) + 0 on 61;
+  architecture a_registerfile of registerfile at 23( 1048) + 0 on 62;
+file . "Eq06-reg16bits.vhd" "feac8ecdaec7640fa96685c5c89aedd62793ecd9" "20220627065523.157":
+  entity reg at 5( 81) + 0 on 59;
+  architecture a_reg of reg at 19( 420) + 0 on 60;
+file . "Eq06-rom.vhd" "6943732eeb381adcbf7f6c5164d66ae165356b35" "20220627065523.259":
+  entity rom at 4( 50) + 0 on 63;
+  architecture a_rom of rom at 16( 283) + 0 on 64;
+file . "Eq06-opcoder.vhd" "df4a59f2cc15592887a91c269db50d73fca01cd2" "20220627065523.356":
+  entity opcoder at 5( 78) + 0 on 67;
+  architecture a_opcoder of opcoder at 16( 304) + 0 on 68;
+file . "Eq06-maq_estados.vhd" "63a762dc847efe3b361f67b948aefe5474c6c274" "20220627065523.450":
+  entity maq_estados at 5( 78) + 0 on 71;
+  architecture a_maq_estados of maq_estados at 16( 294) + 0 on 72;
+file . "Eq06-ULARegs.vhd" "9cce095da535906097ade4e30bacc39510182e70" "20220627065523.559":
+  entity ularegs at 4( 80) + 0 on 75;
+  architecture a_ularegs of ularegs at 26( 1027) + 0 on 76;
+file . "Eq06-Calculadora.vhd" "b19784951918204a16a0ec632ae130d076675ae2" "20220627065523.655":
+  entity calculadora at 4( 71) + 0 on 79;
+  architecture a_calculadora of calculadora at 14( 223) + 0 on 80;
