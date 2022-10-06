@@ -89,17 +89,17 @@ regH: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(16),data_in=>WD3,data
 regI: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(17),data_in=>WD3,data_out=>s_data_outI); -- 18
 regJ: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(18),data_in=>WD3,data_out=>s_data_outJ); -- 19
 regK: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(19),data_in=>WD3,data_out=>s_data_outK); -- 20
-regL: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(10),data_in=>WD3,data_out=>s_data_outL); -- 21
-regM: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(11),data_in=>WD3,data_out=>s_data_outM); -- 22
-regN: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(12),data_in=>WD3,data_out=>s_data_outN); -- 23
-regO: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(13),data_in=>WD3,data_out=>s_data_outO); -- 24
-regP: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(14),data_in=>WD3,data_out=>s_data_outP); -- 25
-regQ: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(15),data_in=>WD3,data_out=>s_data_outQ); -- 26
-regR: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(16),data_in=>WD3,data_out=>s_data_outR); -- 27
-regS: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(17),data_in=>WD3,data_out=>s_data_outS); -- 28
-regT: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(18),data_in=>WD3,data_out=>s_data_outT); -- 29
-regU: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(19),data_in=>WD3,data_out=>s_data_outU); -- 30
-regV: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(10),data_in=>WD3,data_out=>s_data_outV); -- 31
+regL: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(20),data_in=>WD3,data_out=>s_data_outL); -- 21
+regM: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(21),data_in=>WD3,data_out=>s_data_outM); -- 22
+regN: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(22),data_in=>WD3,data_out=>s_data_outN); -- 23
+regO: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(23),data_in=>WD3,data_out=>s_data_outO); -- 24
+regP: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(24),data_in=>WD3,data_out=>s_data_outP); -- 25
+regQ: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(25),data_in=>WD3,data_out=>s_data_outQ); -- 26
+regR: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(26),data_in=>WD3,data_out=>s_data_outR); -- 27
+regS: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(27),data_in=>WD3,data_out=>s_data_outS); -- 28
+regT: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(28),data_in=>WD3,data_out=>s_data_outT); -- 29
+regU: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(29),data_in=>WD3,data_out=>s_data_outU); -- 30
+regV: REG port map(clk=>CLK,rst=>RST,wr_en=>s_write_select(30),data_in=>WD3,data_out=>s_data_outV); -- 31
 
 -- 000: escreve em nada
 s_write_select <= 
